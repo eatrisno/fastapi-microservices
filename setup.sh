@@ -9,4 +9,5 @@ python -m pip install --upgrade pip
 
 pip install -r requirements.txt
 
+bash init.sh
 #run your app (f5 with vscode)
