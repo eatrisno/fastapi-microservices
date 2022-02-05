@@ -1,11 +1,14 @@
-from fastapi import FastAPI, Response, HTTPException
-from app.blog import models
-from app.blog.database import engine
-from app.blog.routers import blog, user, authentication
+from fastapi import FastAPI
 
-models.Base.metadata.create_all(engine)
-app = FastAPI()
+from app.api import router
+from app.core.config import settings
 
-app.include_router(authentication.router)
-app.include_router(blog.router)
-app.include_router(user.router)
+def create_application() -> FastAPI:
+    application = FastAPI(title=settings.PROJECT_NAME)
+    application.include_router(router)
+    # application.add_event_handler("startup", create_redis_pool)
+    # application.add_event_handler("shutdown", close_redis_pool)
+    return application
+
+
+app = create_application()
