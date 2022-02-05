@@ -6,7 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
 from app.core.database import SessionLocal
-from app.core.security import ALGORITHM
+from app.core.security import decode_jwt
 from app.crud.users import crud_user
 from app.models.users import User
 from app.schemas.token import TokenPayload
@@ -22,7 +22,7 @@ async def get_session():
 def get_token_data(token: str = Depends(oauth2)) -> TokenPayload:
     try:
         secret_key = settings.SECRET_KEY.get_secret_value()
-        payload = jwt.decode(token, secret_key, algorithms=[ALGORITHM])
+        payload = decode_jwt(token, secret_key)
         token_data = TokenPayload(**payload)
     except (jwt.JWTError, ValidationError):
         raise HTTPException(status_code=403, detail="Could not validate credentials")

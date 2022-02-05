@@ -2,17 +2,16 @@ from typing import Any, Dict, Optional
 
 from pydantic import BaseSettings, EmailStr, SecretStr, validator
 
-
 class Settings(BaseSettings):
     class Config:
         env_file = '.env'
         env_file_encoding = 'utf-8'
 
-    PROJECT_NAME: str
-    POSTGRES_DB: str
-    POSTGRES_HOST: str
-    POSTGRES_USER: str
-    POSTGRES_PASSWORD: SecretStr
+    PROJECT_NAME: str = 'API Project'
+    POSTGRES_DB: str = 'api_project'
+    POSTGRES_HOST: str = 'localhost'
+    POSTGRES_USER: str = 'postgres'
+    POSTGRES_PASSWORD: SecretStr = ''
     POSTGRES_URI: Optional[str] = None
 
     @validator("POSTGRES_URI", pre=True)
@@ -28,14 +27,15 @@ class Settings(BaseSettings):
             db=values.get("POSTGRES_DB"),
         )
 
-    FIRST_USER_EMAIL: EmailStr
-    FIRST_USER_PASSWORD: SecretStr
+    FIRST_USER_EMAIL: EmailStr = 'admin@mail.com'
+    FIRST_USER_PASSWORD: SecretStr = 'password'
 
-    SECRET_KEY: SecretStr
-    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    SECRET_KEY: SecretStr = 'secret'
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
-    REDIS_HOST: str
-    REDIS_PORT: int
-
+    REDIS_HOST: str = '127.0.0.1'
+    REDIS_PORT: int = '6379'
+    
+    MAX_JOBS: int = 10
 
 settings = Settings()
