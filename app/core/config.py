@@ -38,4 +38,5 @@ class Settings(BaseSettings):
     
     MAX_JOBS: int = 10
 
+    ACTIVE_SERVICES: str = 'all'
 settings = Settings()
