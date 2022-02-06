@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-sqlachemy
+sqlalchemy
 passlib
 python-jose
 python-multipart
@@ -8,8 +8,8 @@ email-validator
 pydantic[dotenv,email]
 gunicorn
 asyncpg
-greenlet
-
+greenlet==2.0.0a1
+bcrypt
 arq
 
 aiosmtplib
@@ -17,7 +17,6 @@ python-dotenv
 
 pyhumps
 uvloop
-gunicorn
 pytest
 pytest-asyncio
 pytest-cov
