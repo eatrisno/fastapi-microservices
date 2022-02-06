@@ -12,6 +12,7 @@ async def create_redis_pool():
         RedisSettings(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
     )
 
+
 async def close_redis_pool():
     redis.pool.close()
 
