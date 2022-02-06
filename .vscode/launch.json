@@ -9,15 +9,14 @@
             "type": "python",
             "request": "launch",
             "module": "uvicorn",
-            "cwd":"${workspaceFolder}/src/python",
+            // "cwd":"${workspaceFolder}/src/python",
             "args": [
-                "app.main:app",
+                "src.python.app.main:app",
                 "--reload",
                 "--host", "0.0.0.0",
                 "--port", "8000",
-                "--workers","7",
             ],
-            "env": {},
+            // "env": {},
             "envFile": "${workspaceFolder}/venv",
             "jinja": true
         }

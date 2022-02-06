@@ -6,10 +6,10 @@ from asgi_lifespan import LifespanManager
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncSession
 
-from users.api.deps import get_session
-from users.core.config import settings
-from users.core.database import engine
-from users.main import app
+from src.python.app.api.deps import get_session
+from src.python.app.core.config import settings
+from src.python.app.core.database import engine
+from src.python.app.main import app
 
 
 @pytest.fixture()
