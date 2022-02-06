@@ -1,7 +1,7 @@
 import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from users.core.config import settings
+from src.python.app.core.config import settings
 
 
 @pytest.mark.asyncio()
