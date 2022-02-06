@@ -14,3 +14,10 @@ asyncpg==0.25.0
 greenlet==1.1.2
 pyhumps
 uvloop
+
+pytest
+pytest-asyncio
+pytest-cov
+mypy
+httpx
+asgi-lifespan
