@@ -11,6 +11,10 @@ class Settings(BaseSettings):
 
     ENV: str = "dev"
     PROJECT_NAME: str = "API Project"
+
+    HOST: str = "0.0.0.0"
+    PORT: int = 8000
+
     POSTGRES_DB: str = "api_project"
     POSTGRES_HOST: str = "localhost"
     POSTGRES_USER: str = "postgres"

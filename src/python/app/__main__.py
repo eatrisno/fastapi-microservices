@@ -42,10 +42,10 @@ class StandaloneApplication(BaseApplication):
 if __name__ == "__main__":
     if settings.ENV == "prod":
         options = {
-            "bind": "%s:%s" % ("127.0.0.1", "8000"),
+            "bind": f"{settings.HOST}:{settings.PORT}",
             "workers": number_of_workers(),
             "worker_class": "uvicorn.workers.UvicornWorker",
         }
         StandaloneApplication(app, options).run()
     else:
-        uvicorn.run("app.main:app", reload=True)
+        uvicorn.run("app.main:app", host=settings.HOST, port=settings.PORT, reload=True)
