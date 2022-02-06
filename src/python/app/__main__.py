@@ -49,4 +49,3 @@ if __name__ == "__main__":
         StandaloneApplication(app, options).run()
     else:
         uvicorn.run("main:app", reload=True)
-        

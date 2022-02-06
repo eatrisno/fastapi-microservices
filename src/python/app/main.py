@@ -25,5 +25,4 @@ def create_application() -> FastAPI:
     application.add_event_handler("shutdown", close_redis_pool)
     return application
 
-
 app = create_application()

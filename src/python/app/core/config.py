@@ -1,8 +1,7 @@
 from functools import cache
 from typing import Any, Dict, Optional
 
-from pydantic import BaseSettings, EmailStr, PostgresDsn, SecretStr, validator
-
+from pydantic import BaseSettings, EmailStr, SecretStr, validator
 
 class Settings(BaseSettings):
     class Config:
@@ -32,15 +31,11 @@ class Settings(BaseSettings):
 
     FIRST_USER_EMAIL: EmailStr = 'admin@mail.com'
     FIRST_USER_PASSWORD: SecretStr = 'password'
-
     SECRET_KEY: SecretStr = 'secret'
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
-
     REDIS_HOST: str = '127.0.0.1'
     REDIS_PORT: int = '6379'
-    
     MAX_JOBS: int = 10
-
     ACTIVE_SERVICES: str = 'all'
     
 @cache
