@@ -3,7 +3,7 @@ __pycache__
 .DS_Store
 
 # Pants workspace files
-/.pants.d/
+.pants.d/
 /dist/
-/.pids
-/.pants.workdir.file_lock*
+.pids
+.pants.workdir.file_lock*
