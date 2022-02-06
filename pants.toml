@@ -29,7 +29,7 @@ config = "setup.cfg"
 version = "mypy==0.910"
 
 [black]
-version = "black==21.8b0"
+lockfile = ''
 
 [source]
 root_patterns = ["/"]

@@ -1,15 +1,15 @@
+import base64
 from datetime import datetime, timedelta
 from typing import Optional
 
-import base64
 from jose import jwt
 from passlib.context import CryptContext
 from pydantic import EmailStr
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.config import settings
-from app.crud.users import crud_user
-from app.models.users import User
+from src.python.app.core.config import settings
+from src.python.app.crud.users import crud_user
+from src.python.app.models.users import User
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

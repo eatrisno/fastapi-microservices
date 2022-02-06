@@ -1,6 +1,8 @@
-from typing import Any, Dict, Optional
 from functools import cache
+from typing import Any, Dict, Optional
+
 from pydantic import BaseSettings, EmailStr, PostgresDsn, SecretStr, validator
+
 
 class Settings(BaseSettings):
     class Config:

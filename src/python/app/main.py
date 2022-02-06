@@ -1,10 +1,11 @@
 from arq import create_pool
 from arq.connections import RedisSettings
 from fastapi import FastAPI
+from greenlet import greenlet
 
-from app.api import router
-from app.core import redis
-from app.core.config import settings
+from src.python.app.api import router
+from src.python.app.core import redis
+from src.python.app.core.config import settings
 
 
 async def create_redis_pool():

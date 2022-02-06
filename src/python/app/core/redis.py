@@ -1,6 +1,7 @@
 from typing import Optional
+
 from arq import create_pool
-from arq.connections import RedisSettings, ArqRedis
+from arq.connections import ArqRedis, RedisSettings
 
 pool: Optional[ArqRedis] = None
 

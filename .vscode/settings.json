@@ -1,7 +1,3 @@
 {
-    "python.defaultInterpreterPath": "src/python/venv/bin/python",
-    "python.pythonPath": "src/python/venv/bin/python",
-    "python.analysis.extraPaths": [
-        "src/python"
-    ]
+    "python.defaultInterpreterPath": "venv/bin/python",
 }

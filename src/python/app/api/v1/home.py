@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 
-from app.api.deps import get_token_data
+from src.python.app.api.deps import get_token_data
 
 router = APIRouter(prefix="/home", tags=["Home"])
 
