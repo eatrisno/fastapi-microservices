@@ -1,5 +1,4 @@
 import asyncio
-from cmath import log
 
 import uvloop
 from arq.connections import RedisSettings
