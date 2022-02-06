@@ -1,7 +1,7 @@
-python_library()
-
 pex_binary(
     name="binary",
     dependencies=['//:asyncpg'],
-    source="__main__.py",
+    entry_point="__main__.py",
 )
+
+python_sources()

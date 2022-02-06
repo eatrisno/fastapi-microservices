@@ -4,10 +4,10 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from dotenv import load_dotenv
 
-from src.app.core.config import settings
-from src.app.core.database import SessionLocal
-from src.app.core.security import get_password_hash
-from src.app.models.users import User
+from app.core.config import settings
+from app.core.database import SessionLocal
+from app.core.security import get_password_hash
+from app.models.users import User
 
 load_dotenv()
 

@@ -1,5 +1,5 @@
 [GLOBAL]
-pants_version = "2.6.1rc2"
+pants_version = "2.9.0"
 backend_packages = [
     "pants.backend.python",
     "pants.backend.python.lint.black",
@@ -30,3 +30,6 @@ version = "mypy==0.910"
 
 [black]
 version = "black==21.8b0"
+
+[source]
+root_patterns = ["/"]
