@@ -35,5 +35,6 @@ lockfile = ''
 root_patterns = [
   '/src/python',
   '/test',
-  '/services'
+  '/services/app/migrations',
+  '/services/app/scripts'
 ]
