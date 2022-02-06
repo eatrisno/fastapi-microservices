@@ -32,4 +32,8 @@ version = "mypy==0.910"
 lockfile = ''
 
 [source]
-root_patterns = ["/"]
+root_patterns = [
+  '/src/python',
+  '/test',
+  '/services'
+]

@@ -4,8 +4,8 @@ from typing import Any, Callable, Dict, Protocol, Type
 import uvicorn
 from gunicorn.app.base import BaseApplication
 
-from src.python.app.core.config import settings
-from src.python.app.main import app
+from app.core.config import settings
+from app.main import app
 
 
 class ASGI3Protocol(Protocol):
@@ -48,4 +48,4 @@ if __name__ == "__main__":
         }
         StandaloneApplication(app, options).run()
     else:
-        uvicorn.run("main:app", reload=True)
+        uvicorn.run("app.main:app", reload=True)

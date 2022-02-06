@@ -4,12 +4,12 @@ from jose import jwt
 from pydantic import ValidationError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.python.app.core.config import settings
-from src.python.app.core.database import SessionLocal
-from src.python.app.core.security import decode_jwt
-from src.python.app.crud.users import crud_user
-from src.python.app.models.users import User
-from src.python.app.schemas.token import TokenPayload
+from app.core.config import settings
+from app.core.database import SessionLocal
+from app.core.security import decode_jwt
+from app.crud.users import crud_user
+from app.models.users import User
+from app.schemas.token import TokenPayload
 
 oauth2 = OAuth2PasswordBearer(tokenUrl="/api/v1/login")
 

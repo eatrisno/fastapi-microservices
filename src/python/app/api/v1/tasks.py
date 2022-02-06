@@ -1,9 +1,9 @@
 from arq.jobs import Job as ArqJob
 from fastapi import APIRouter, Depends
 
-from src.python.app.api.deps import on_user
-from src.python.app.core import redis
-from src.python.app.schemas.job import Job
+from app.api.deps import on_user
+from app.core import redis
+from app.schemas.job import Job
 
 router = APIRouter(prefix="/tasks", tags=["Tasks"], dependencies=[Depends(on_user)])
 

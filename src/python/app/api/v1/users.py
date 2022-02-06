@@ -5,16 +5,16 @@ from fastapi.responses import Response
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.python.app.api.deps import (
+from app.api.deps import (
     get_current_superuser,
     get_current_user,
     get_session,
     on_superuser,
 )
-from src.python.app.core.security import get_password_hash
-from src.python.app.crud.users import crud_user
-from src.python.app.models.users import User
-from src.python.app.schemas.user import UserCreate, UserInDB, UserOut, UserUpdate
+from app.core.security import get_password_hash
+from app.crud.users import crud_user
+from app.models.users import User
+from app.schemas.user import UserCreate, UserInDB, UserOut, UserUpdate
 
 router = APIRouter(prefix="/users", tags=["Users"])
 

@@ -5,7 +5,7 @@ from typing import Any, Dict, Optional
 from aiosmtplib import send
 from pydantic import EmailStr
 
-from src.python.app.core.config import settings
+from app.core.config import settings
 
 
 async def send_message(

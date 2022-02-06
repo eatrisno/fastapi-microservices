@@ -8,17 +8,20 @@
             "name": "Python: FastAPI",
             "type": "python",
             "request": "launch",
-            "module": "uvicorn",
-            // "cwd":"${workspaceFolder}/src/python",
-            "args": [
-                "src.python.app.main:app",
-                "--reload",
-                "--host", "0.0.0.0",
-                "--port", "8000",
-            ],
+            "module":"app",
+            // "module": "python",
+            "cwd":"${workspaceFolder}/src/python",
+            // "args": [
+            //     "src/python/app"
+                // "src.python.app.main:app",
+                // "--reload",
+                // "--host", "0.0.0.0",
+                // "--port", "8000",
+            // ],
             // "env": {},
             "envFile": "${workspaceFolder}/venv",
-            "jinja": true
+            "console": "integratedTerminal",
+            // "jinja": true
         }
     ]
 }
