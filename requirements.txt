@@ -1,6 +1,6 @@
-fastapi
-uvicorn
-sqlalchemy
+fastapi==0.73.0
+uvicorn==0.17.4
+sqlalchemy==1.4.31
 passlib
 python-jose
 python-multipart
@@ -10,6 +10,7 @@ gunicorn
 asyncpg
 greenlet==2.0.0a1
 bcrypt
+
 arq
 
 aiosmtplib
