@@ -15,7 +15,8 @@ repo_id = "0b797772-e5c1-4b91-81c5-069b5578acbe"
 [python-infer]
 inits = true
 
-[python-bootstrap]
+[python]
+interpreter_constraints = ["CPython==3.9.*"]
 
 [flake8]
 config = "setup.cfg"
@@ -33,6 +34,5 @@ version = "mypy==0.910"
 [source]
 root_patterns = [
   '/src/python',
-  'services/scripts'
-  '/test',
+  '/test'
 ]

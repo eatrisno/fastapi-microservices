@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
 
+    INIT_DB: str = "true"
+
     POSTGRES_DB: str = "api_project"
     POSTGRES_HOST: str = "localhost"
     POSTGRES_USER: str = "postgres"

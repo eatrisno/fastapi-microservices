@@ -1,3 +1,4 @@
+_root=`pwd`
 #create venv
 python3 -m venv venv
 
@@ -9,8 +10,11 @@ python -m pip install --upgrade pip
 
 pip install -r requirements.txt
 
-cd 'services/app'
-bash init.sh
+cd "$_root/services/app" && bash init.sh
+
+
+cd "$_root/src/python"
+python init_db.py
 
 _MSG='run your app (f5 with vscode)'
-echo $_MSG
+echo "$_MSG"
