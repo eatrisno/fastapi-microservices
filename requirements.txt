@@ -26,3 +26,10 @@ httpx
 asgi-lifespan
 
 alembic
+
+black
+isort
+flake8
+
+lazy-object-proxy
+wrapt

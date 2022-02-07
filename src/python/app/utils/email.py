@@ -1,4 +1,4 @@
-from email import message_from_string
+# from email import message_from_string
 from email.mime.multipart import MIMEMultipart
 from typing import Any, Dict, Optional
 

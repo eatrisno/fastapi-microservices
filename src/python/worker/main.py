@@ -1,8 +1,10 @@
 import asyncio
+
 import uvloop
 from arq.connections import RedisSettings
-from worker.core.config import settings
+
 from worker import tasks
+from worker.core.config import settings
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
