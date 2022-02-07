@@ -1,4 +1,3 @@
-from arq.jobs import Job as ArqJob
 from fastapi import APIRouter, Depends
 
 from app.api.deps import on_user
@@ -22,5 +21,5 @@ async def create_hello_task(message: str):
 
 @router.get("/{task_id}/")
 async def get_task(task_id: str):
-    job = ArqJob(task_id, redis.pool)
+    job = redis.pool(task_id, redis.pool)
     return str(await job.info())
