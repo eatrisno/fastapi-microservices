@@ -12,7 +12,7 @@
 ## start worker
 
 ```cd src/python```
-```python -m app```
+```python -m woker```
 
 ## start app
 
