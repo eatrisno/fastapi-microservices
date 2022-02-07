@@ -1,8 +1,8 @@
 [GLOBAL]
-pants_version = "2.9.0"
+pants_version = "2.10.0.dev0"
 backend_packages = [
     "pants.backend.python",
-    "pants.backend.python.lint.black",
+#    "pants.backend.python.lint.black",
     "pants.backend.python.lint.isort",
     "pants.backend.python.lint.flake8",
     "pants.backend.python.typecheck.mypy",
@@ -15,8 +15,7 @@ repo_id = "0b797772-e5c1-4b91-81c5-069b5578acbe"
 [python-infer]
 inits = true
 
-[python-setup]
-interpreter_constraints = ["CPython==3.9.*"]
+[python-bootstrap]
 
 [flake8]
 config = "setup.cfg"
@@ -29,12 +28,10 @@ config = "setup.cfg"
 version = "mypy==0.910"
 
 [black]
-lockfile = ''
+#version = "black==21.8b0"
 
 [source]
 root_patterns = [
   '/src/python',
   '/test',
-  '/services/app/migrations',
-  '/services/app/scripts'
 ]

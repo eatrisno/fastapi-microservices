@@ -5,9 +5,9 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     class Config:
-        env_file = '.env'
-        env_file_encoding = 'utf-8'
-        
+        env_file = ".env"
+        env_file_encoding = "utf-8"
+
     REDIS_HOST: str = "localhost"
     REDIS_PORT: int = 6379
 

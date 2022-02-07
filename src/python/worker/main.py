@@ -1,10 +1,8 @@
 import asyncio
-
 import uvloop
 from arq.connections import RedisSettings
-
 from worker.core.config import settings
-from worker.tasks import test_task, hello_task
+from worker import tasks
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
@@ -18,7 +16,7 @@ async def shutdown(ctx: dict) -> None:
 
 
 class WorkerSettings:
-    functions = [test_task, hello_task]
+    functions = [tasks.test_task, tasks.hello_task]
     redis_settings = RedisSettings(settings().REDIS_HOST, port=settings().REDIS_PORT)
     on_startup = startup
     on_shutdown = shutdown
