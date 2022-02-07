@@ -33,5 +33,6 @@ version = "mypy==0.910"
 [source]
 root_patterns = [
   '/src/python',
+  'services/scripts'
   '/test',
 ]
